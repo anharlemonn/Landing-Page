@@ -1,12 +1,3 @@
-section {
-    flex: 1 0 auto;
-    position: relative;
-    width: 100%;
-    -webkit-transition: all .5s ease-in;
-    -o-transition: all .5s ease-in;
-    transition: all .5s ease-in;
-}
-
 .who_am_I {
     font-family: Cinzel;
 }
@@ -230,5 +221,24 @@ section {
 }
 
 .intro_sec .h_bg-image {
-    filter: saturate(0.5);
+    filter: saturate(0.75);
+}
+
+.intro_sec .h_bg-img {
+    border-radius: 30%;
+    margin-top: 50px;
+    height: 550px;
+    width: 450px;
+    position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+.intro_sec .h_bg-img img {
+    width: 100%;
+    position: absolute;
+    bottom: -18%;
 }

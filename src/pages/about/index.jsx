@@ -10,10 +10,10 @@ import {
   services,
 } from "../../content_option";
 
-export const About = () => {
+export default function About() {
   return (
     <HelmetProvider>
-      <Container className="About-header">
+      <Container className="About-header" id="about">
         <Helmet>
           <meta charSet="utf-8" />
           <title> About | {meta.title}</title>
@@ -21,30 +21,25 @@ export const About = () => {
         </Helmet>
         <Row className="mb-5 mt-3 pt-md-3">
           <Col lg="8">
-            <h1 className="display-4 mb-4">About me</h1>
+            <h1 className="display-4 mb-4">Professional Experience</h1>
             <hr className="t_border my-4 ml-0 text-left" />
           </Col>
         </Row>
-        <Row className="sec_sp">
-          <Col lg="5">
-            <h3 className="color_sec py-4">{dataabout.title}</h3>
-          </Col>
-          <Col lg="7" className="d-flex align-items-center">
-            <div>
-              <p>{dataabout.aboutme}</p>
-            </div>
-          </Col>
-        </Row>
         <Row className=" sec_sp">
-          <Col lg="5">
-            <h3 className="color_sec py-4">Work Timline</h3>
+          <Col lg="3">
+            <h3 className="color_sec py-4">Work Timeline</h3>
           </Col>
-          <Col lg="7">
+          <Col lg="9">
             <table className="table caption-top">
               <tbody>
                 {worktimeline.map((data, i) => {
                   return (
                     <tr key={i}>
+                      <td>
+                        <div className="img_back">
+                          <img className="icon" src={data.icon} alt="" />
+                        </div>
+                      </td>
                       <th scope="row">{data.jobtitle}</th>
                       <td>{data.where}</td>
                       <td>{data.date}</td>
@@ -56,10 +51,10 @@ export const About = () => {
           </Col>
         </Row>
         <Row className="sec_sp">
-          <Col lg="5">
+          <Col lg="4">
             <h3 className="color_sec py-4">Skills</h3>
           </Col>
-          <Col lg="7">
+          <Col lg="8">
             {skills.map((data, i) => {
               return (
                 <div key={i}>
@@ -69,6 +64,10 @@ export const About = () => {
                       className="progress-bar"
                       style={{
                         width: `${data.value}%`,
+                        background:
+                          data.value > 60
+                            ? "var(--text-color-3)"
+                            : "var(--text-color)",
                       }}
                     >
                       <div className="progress-value">{data.value}%</div>
@@ -79,22 +78,7 @@ export const About = () => {
             })}
           </Col>
         </Row>
-        <Row className="sec_sp">
-          <Col lang="5">
-            <h3 className="color_sec py-4">services</h3>
-          </Col>
-          <Col lg="7">
-            {services.map((data, i) => {
-              return (
-                <div className="service_ py-4" key={i}>
-                  <h5 className="service__title">{data.title}</h5>
-                  <p className="service_desc">{data.description}</p>
-                </div>
-              );
-            })}
-          </Col>
-        </Row>
       </Container>
     </HelmetProvider>
   );
-};
+}
