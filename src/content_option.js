@@ -118,6 +118,11 @@ const services = [{
 
 const dataportfolio = [
     {
+        img: "chess-events.png",
+        description: "Chess.com Marketing Campaigns",
+        link: "https://www.chess.com/events"
+    },
+    {
         img: "weavegrid_taskq.png",
         description: "Weavegrid Task Queue",
         link: "https://app.weavegrid.com/login?next=/"
@@ -128,14 +133,14 @@ const dataportfolio = [
         link: "https://workwell.herokuapp.com/workwell/",
     },
     {
-        img: "rhythmix.png",
-        description: "Rhythmix Music Game",
-        link: "https://github.com/anlon-zhu/rhythmix",
-    },
-    {
         img: "energy_research.png",
         description: "UCSB - Renewable Energy Research",
         link: "https://www.dropbox.com/scl/fi/dq0ajcw8h4jfkhgihvtz7/Zhu_Energy_Research.pdf?rlkey=3uvhjaoi2b30lqf98ex23hz7x&dl=0"
+    },
+    {
+        img: "rhythmix.png",
+        description: "Rhythmix Music Game",
+        link: "https://github.com/anlon-zhu/rhythmix",
     },
 ];
 
