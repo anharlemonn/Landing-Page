@@ -23,6 +23,13 @@ const dataabout = {
 
 const worktimeline = [
     {
+        icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Microsoft_icon.svg/2048px-Microsoft_icon.svg.png",
+        jobtitle: "Software Engineer Intern",
+        where: "Microsoft",
+        date: "Jun. 2024 – Aug. 2024",
+        description: "...", 
+    },
+    {
         icon: "https://images.crunchbase.com/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/tphgt4bnih4amrow1xzt",
         jobtitle: "Full-Stack Engineer Intern",
         where: "Weavegrid",
