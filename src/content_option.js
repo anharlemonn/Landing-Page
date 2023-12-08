@@ -118,19 +118,24 @@ const services = [{
 
 const dataportfolio = [
     {
-        img: "chess-events.png",
-        description: "Chess.com Marketing Campaigns",
-        link: "https://www.chess.com/events"
+        img: "fatezero.png",
+        description: "FateZero UBW - Text2Video Research",
+        link: "https://www.youtube.com/watch?v=W2CZ2xDIlGQ",
     },
     {
-        img: "weavegrid_taskq.png",
-        description: "Weavegrid Task Queue",
-        link: "https://app.weavegrid.com/login?next=/"
+        img: "wave-clock.png",
+        description: "Wave Clock",
+        link: "https://wave-clock.vercel.app/"
     },
     {
-        img: "workwell.jpeg",
+        img: "workwell.png",
         description: "Workwell Database",
         link: "https://workwell.herokuapp.com/workwell/",
+    },
+    {
+        img: "chess-events.webp",
+        description: "Chess Marketing Campaigns",
+        link: "https://www.chess.com/events"
     },
     {
         img: "energy_research.png",
@@ -138,7 +143,12 @@ const dataportfolio = [
         link: "https://www.dropbox.com/scl/fi/dq0ajcw8h4jfkhgihvtz7/Zhu_Energy_Research.pdf?rlkey=3uvhjaoi2b30lqf98ex23hz7x&dl=0"
     },
     {
-        img: "rhythmix.png",
+        img: "weavegrid.webp",
+        description: "Weavegrid Task Queue",
+        link: "https://app.weavegrid.com/login?next=/"
+    },
+    {
+        img: "rhythmix.jpeg",
         description: "Rhythmix Music Game",
         link: "https://github.com/anlon-zhu/rhythmix",
     },

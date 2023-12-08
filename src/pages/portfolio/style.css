@@ -20,8 +20,7 @@
     margin: 1rem auto;
     position: relative;
     background: var(--secondary-color);
-    padding: 6px;
-    border: 1px solid var(--secondary-color);
+    border: 6px solid var(--secondary-color);
     transition: 0.3s ease;
     font-size: 0;
     min-height: 300px;
@@ -31,9 +30,12 @@
 }
 
 .po_item img {
-    max-width: 100%;
+    width: 100%;
+    min-height: 300px;
     height: auto;
-    filter: saturate(0.45);
+    max-height: 300px;
+    object-fit: cover;
+    filter: saturate(0.85);
 }
 
 .po_item .content {
