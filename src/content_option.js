@@ -73,40 +73,134 @@ const worktimeline = [
 
 const skills = [{
         name: "Python",
+        icon: "cibPython",
         value: 90,
     },
     {
         name: "Java",
+        icon: "cibJava",
         value: 80,
     },
     {
         name: "C",
+        icon: "cibC",
         value: 80,
     },
     {
-        name: "SQL",
-        value: 90,
+        name: "C++",
+        icon: "cibCplusplus",
+        value: 70,
     },
     {
-        name: "Javascript & Typescript",
+        name: "Javascript",
+        icon: "cibJavascript",
+        value: 80,
+    },
+    {
+        name: "TypeScript",
+        icon: "cibTypescript",
+        value: 70,
+    },
+    {
+        name: "PostgreSQL",
+        icon: "cibPostgresql",
+        value: 80,
+    },
+    {
+        name: "MySQL",
+        icon: "cibMysql",
+        value: 80,
+    },
+    {
+        name: "Docker",
+        icon: "cibDocker",
+        value: 70,
+    },
+    {
+        name: "AWS",
+        icon: "cibAmazonAws",
+        value: 70,
+    },
+    {
+        name: "AzureDevOps",
+        icon: "cibAzureDevops",
+        value: 70,
+    },
+    {
+        name: "GraphQL",
+        icon: "cibGraphql",
+        value: 70,
+    },
+    {
+        name: "Redis",
+        icon: "cibRedis",
+        value: 70,
+    },
+    {
+        name: "Node",
+        icon: "cibNodeJs",
+        value: 80,
+    },
+    {
+        name: "Vue",
+        icon: "cibVueJs",
+        value: 70,
+    },
+    {
+        name: "Symfony",
+        icon: "cibSymfony",
+        value: 70,
+    },
+    {
+        name: "Django",
+        icon: "cibDjango",
+        value: 80,
+    },
+    {
+        name: "Flask",
+        icon: "cibFlask",
+        value: 70,
+    },
+    {
+        name: "PyTorch",
+        icon: "cibPytorch",
+        value: 70,
+    },
+    {
+        name: "PHP",
+        icon: "cibPhp",
+        value: 70,
+    },
+    {
+        name: "HTML",
+        icon: "cibHtml5",
+        value: 80,
+    },
+    {
+        name: "CSS",
+        icon: "cibCss3Shiled",
         value: 80,
     },
     {
         name: "GO",
+        icon: "cibGo",
         value: 50,
     },
     {
         name: "Rust",
+        icon: "cibRust",
         value: 20,
     },
     {
         name: "OCaml",
+        icon: "cibOcaml",
         value: 40,
     },
     {
-        name: "React",
-        value: 85,
-    },
+        name: "R",
+        icon: "cibR",
+        value: 70,
+    }
 ];
 
 const services = [{

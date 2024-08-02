@@ -2,6 +2,8 @@ import React from "react";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
+import SkillCloud from "../../components/skillcloud";
+import * as icon from "@coreui/icons";
 import {
   dataabout,
   meta,
@@ -55,27 +57,7 @@ export default function About() {
             <h3 className="color_sec py-4">Skills</h3>
           </Col>
           <Col lg="8">
-            {skills.map((data, i) => {
-              return (
-                <div key={i}>
-                  <h3 className="progress-title">{data.name}</h3>
-                  <div className="progress">
-                    <div
-                      className="progress-bar"
-                      style={{
-                        width: `${data.value}%`,
-                        background:
-                          data.value > 60
-                            ? "var(--text-color-3)"
-                            : "var(--text-color)",
-                      }}
-                    >
-                      <div className="progress-value">{data.value}%</div>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
+            <SkillCloud skills={skills} icon={icon} />
           </Col>
         </Row>
       </Container>
