@@ -70,7 +70,10 @@ function useEventListener(eventName, handler, element = document) {
 // const fast = { tension: 800, friction: 50 }; // Previously 1200, 40
 const slow = { mass: 10, tension: 350, friction: 50 }; // Previously 200, 50
 const lag = { mass: 17, tension: 180, friction: 50 }; // Add a new configuration for lagging
-const trans = (x, y) => `translate3d(${x}px,${y}px,0) translate3d(-50%,-50%,0)`;
+const trans = (x, y) => {
+  return `translate3d(${x}px, ${y}px, 0) translate3d(-50%, -50%, 0)`;
+};
+
 
 function CursorCore({
   outerStyle,
@@ -104,6 +107,7 @@ function CursorCore({
   const [isVisible, setIsVisible] = useState(false);
   const [isActive, setIsActive] = useState(false);
   const [isActiveClickable, setIsActiveClickable] = useState(false);
+  const [isShrinking, setIsShrinking] = useState(false);
   const endX = useRef(0);
   const endY = useRef(0);  
 
@@ -179,6 +183,14 @@ function CursorCore({
       cursorOuterRef.current.style.opacity = 0;
     }
   }, [isVisible]);
+
+  useEffect(() => {
+    if (isActive || isActiveClickable) {
+      setIsShrinking(true);
+    } else {
+      setIsShrinking(false);
+    }
+  }, [innerScale, outerScale, isActive, isActiveClickable]);
 
   useEffect(() => {
     const clickableEls = document.querySelectorAll(clickables.join(','));
@@ -262,7 +274,7 @@ function CursorCore({
     <React.Fragment>
       <div ref={cursorOuterRef} style={styles.cursorOuter} />
       <div ref={cursorInnerRef} style={styles.cursorInner} />
-      <div className="goo-container">
+      <div className={`goo-container ${isShrinking ? 'shrinking' : ''}`}>
         <svg style={{ position: 'absolute', width: 0, height: 0 }}>
           <filter id="goo">
             <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="30" />
@@ -273,7 +285,7 @@ function CursorCore({
           </filter>
         </svg>
         {trail.map((props, index) => (
-          <animated.div key={index} style={{ transform: props.xy.to(trans) }} />
+          <animated.div key={index} style={{ transform: props.xy.to(trans) }}/>
         ))}
       </div>
     </React.Fragment>

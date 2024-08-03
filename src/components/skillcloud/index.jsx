@@ -1,34 +1,35 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { useSprings, animated } from "@react-spring/web";
 import CIcon from "@coreui/icons-react";
 import "./style.css";
 
 const SkillCloud = ({ skills, icon }) => {
   const cloudRef = useRef(null);
-  const [positions, setPositions] = useState([]);
-  const [springs, setSprings] = useSprings(skills.length, (i) => ({
-    left: positions[i]?.left || 0,
-    top: positions[i]?.top || 0,
-    scale: 1,
-    config: { mass: 1, tension: 280, friction: 60 },
+
+  const [springs, api] = useSprings(skills.length, (i) => ({
+    x: 0,
+    config: { tension: 200, friction: 10 },
   }));
 
   useEffect(() => {
     const cloudElement = cloudRef.current;
-    const skillElements = cloudElement.children;
-    const newPositions = Array.from(skillElements).map((el) => ({
-      left: Math.random() * (cloudElement.offsetWidth - el.offsetWidth),
-      top: Math.random() * (cloudElement.offsetHeight - el.offsetHeight),
-    }));
-    setPositions(newPositions);
-  }, [skills]);
+    const handleResize = () => {
+      api.start((i) => ({ x: 0 }));
+    };
 
-  useEffect(() => {
-    setSprings((i) => ({
-      left: positions[i]?.left || 0,
-      top: positions[i]?.top || 0,
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [api]);
+
+  const handleMouseEnter = (i) => {
+    api.start((index) => ({
+      x: index === i ? (Math.random() - 0.5) * 20 : 0,
     }));
-  }, [positions]);
+  };
+
+  const handleMouseLeave = () => {
+    api.start((index) => ({ x: 0 }));
+  };
 
   return (
     <div ref={cloudRef} className="skill-cloud">
@@ -36,23 +37,11 @@ const SkillCloud = ({ skills, icon }) => {
         <animated.div
           key={i}
           className="skill-item"
-          style={{ ...springs[i], position: "absolute" }}
-          onMouseEnter={() =>
-            setSprings((index) => ({
-              scale: index === i ? 1.5 : 1,
-            }))
-          }
-          onMouseLeave={() =>
-            setSprings((index) => ({
-              scale: 1,
-            }))
-          }
+          style={{ transform: springs[i].x.to((x) => `translateX(${x}px)`) }}
+          onMouseEnter={() => handleMouseEnter(i)}
+          onMouseLeave={handleMouseLeave}
         >
-          <CIcon
-            icon={icon[data.icon]}
-            size="xl"
-            style={{ transform: `scale(${springs[i].scale})` }}
-          />
+          <CIcon icon={icon[data.icon]} size="xl" />
           <span>{data.name}</span>
         </animated.div>
       ))}

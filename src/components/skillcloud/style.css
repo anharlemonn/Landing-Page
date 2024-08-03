@@ -1,20 +1,17 @@
 .skill-cloud {
-  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 200px;
-  border: 1px solid #ccc; /* for debugging purposes */
-  overflow: hidden;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .skill-item {
-  text-align: center;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.skill-item span {
-  display: block;
-  margin-top: 8px;
-  font-size: 14px;
-  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  transition: transform 0.2s ease-in-out;
 }
