@@ -11,23 +11,23 @@
   will-change: transform;
   border-radius: 50%;
   background: var(--primary-color);
-  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.8);
   opacity: 0.6;
 }
 
 .goo-container > div:nth-child(1) {
-  width: 60px;
-  height: 60px;
+  width: 45px;
+  height: 45px;
 }
 
 .goo-container > div:nth-child(2) {
-  width: 125px;
-  height: 125px;
+  width: 90px;
+  height: 90px;
 }
 
 .goo-container > div:nth-child(3) {
-  width: 75px;
-  height: 75px;
+  width: 65px;
+  height: 65px;
 }
 
 .goo-container > div::after {
@@ -38,7 +38,7 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.4);
 }
 
 .goo-container > div:nth-child(2)::after {

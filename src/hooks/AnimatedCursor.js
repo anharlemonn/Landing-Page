@@ -68,8 +68,8 @@ function useEventListener(eventName, handler, element = document) {
 }
 
 // const fast = { tension: 800, friction: 50 }; // Previously 1200, 40
-const slow = { mass: 10, tension: 400, friction: 50 }; // Previously 200, 50
-const lag = { mass: 15, tension: 180, friction: 60 }; // Add a new configuration for lagging
+const slow = { mass: 10, tension: 350, friction: 50 }; // Previously 200, 50
+const lag = { mass: 17, tension: 180, friction: 50 }; // Add a new configuration for lagging
 const trans = (x, y) => `translate3d(${x}px,${y}px,0) translate3d(-50%,-50%,0)`;
 
 function CursorCore({
@@ -156,6 +156,7 @@ function CursorCore({
     if (isActive) {
       cursorInnerRef.current.style.transform = `translate(-50%, -50%) scale(${innerScale})`;
       cursorOuterRef.current.style.transform = `translate(-50%, -50%) scale(${outerScale})`;
+      
     } else {
       cursorInnerRef.current.style.transform = 'translate(-50%, -50%) scale(1)';
       cursorOuterRef.current.style.transform = 'translate(-50%, -50%) scale(1)';
