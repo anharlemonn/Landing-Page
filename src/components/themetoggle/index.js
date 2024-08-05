@@ -1,16 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { WiMoonAltWaningCrescent4 } from "react-icons/wi";
-
+import { useTheme } from '../../hooks/ThemeContext'; // Make sure to import the ThemeContext
 
 const Themetoggle = () => {
-  const [theme, settheme] = useState(localStorage.getItem("theme"));
+  const { theme, setTheme } = useTheme();
+
   const themetoggle = () => {
-    settheme(theme === "dark" ? "light" : "dark");
+    setTheme(theme === "dark" ? "light" : "dark");
   };
-  useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme ); 
-  }, [theme]);
+
   return (
     <div className="nav_ac" onClick={themetoggle}>
       <WiMoonAltWaningCrescent4 />

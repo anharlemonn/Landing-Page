@@ -5,8 +5,17 @@ import Typewriter from "typewriter-effect";
 import { introdata, meta } from "../../content_option";
 import { HashLink as Link } from "react-router-hash-link";
 import my_img from "./Zhu_headshot.png";
+import Modal from "../../components/modal/modal";
+import { useState } from "react";
+import resumePDF from "./Anlon_Resume.pdf";
+import PDFViewer from "../../hooks/PDFViewer.tsx";
 
 export default function Home() {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleModal = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <HelmetProvider>
       <section id="home" className="home">
@@ -15,7 +24,7 @@ export default function Home() {
           <title> {meta.title}</title>
           <meta name="description" content={meta.description} />
         </Helmet>
-        <div className="intro_sec d-block d-lg-flex align-items-center ">
+        <div className="intro_sec d-block d-lg-flex align-items-center">
           <div className="h_bg-image order-1 order-lg-2">
             <div className="h_bg-img">
               <img src={my_img} alt="my_img" />
@@ -47,11 +56,15 @@ export default function Home() {
                       My Portfolio
                     </div>
                   </Link>
-                  <Link to="/#contact">
+
+                  <Link to="#" onClick={toggleModal}>
                     <div id="button_p" className="ac_btn btn">
-                      Contact Me
+                      Resume
                     </div>
                   </Link>
+                  <Modal isOpen={isOpen} onClose={toggleModal} title="Résumé">
+                    <PDFViewer fileUrl={resumePDF} />
+                  </Modal>
                 </div>
               </div>
             </div>

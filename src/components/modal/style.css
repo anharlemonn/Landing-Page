@@ -1,0 +1,29 @@
+.modal__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .modal__close-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  .modal__close-button:hover {
+    color: var(--text-color-3);
+  }
+  
+.modal__header_item {
+    color: var(--text-color-2);
+    line-height: 1;
+    font-size: 2rem;
+    display: inline-block;
+    position: relative;
+    padding: 4px 0px;
+    text-decoration: none;
+    font-family: Marcellus;
+}

@@ -1,6 +1,5 @@
 // AnimatedCursor.js
 import React, { useEffect, useRef, useState, useCallback } from "react";
-import useMeasure from 'react-use-measure';
 import { useTrail, animated } from '@react-spring/web';
 import './GooBlob.css'; // Add your GooBlob styles here
 
@@ -68,8 +67,8 @@ function useEventListener(eventName, handler, element = document) {
 }
 
 // const fast = { tension: 800, friction: 50 }; // Previously 1200, 40
-const slow = { mass: 10, tension: 350, friction: 50 }; // Previously 200, 50
-const lag = { mass: 17, tension: 180, friction: 50 }; // Add a new configuration for lagging
+const slow = { mass: 8, tension: 250, friction: 40 }; // Previously 200, 50
+const lag = { mass: 13, tension: 160, friction: 50 }; // Add a new configuration for lagging
 const trans = (x, y) => {
   return `translate3d(${x}px, ${y}px, 0) translate3d(-50%, -50%, 0)`;
 };
@@ -78,13 +77,12 @@ const trans = (x, y) => {
 function CursorCore({
   outerStyle,
   innerStyle,
-  color = '220, 90, 90',
+  color = 'black',
   outerAlpha = 0.3,
   innerSize = 8,
   outerSize = 8,
   outerScale = 6,
   innerScale = 0.6,
-  trailingSpeed = 8,
   clickables = [
     'a',
     'input[type="text"]',
@@ -97,6 +95,7 @@ function CursorCore({
     'textarea',
     'button',
     '.link',
+    '.nav_ac'
   ],
 }) {
   const cursorOuterRef = useRef();
@@ -129,15 +128,15 @@ function CursorCore({
   const animateOuterCursor = useCallback(
     (time) => {
       if (previousTimeRef.current !== undefined) {
-        coords.x += (endX.current - coords.x) / trailingSpeed;
-        coords.y += (endY.current - coords.y) / trailingSpeed;
+        coords.x += (endX.current - coords.x);
+        coords.y += (endY.current - coords.y);
         cursorOuterRef.current.style.top = `${coords.y}px`;
         cursorOuterRef.current.style.left = `${coords.x}px`;
       }
       previousTimeRef.current = time;
       requestRef.current = requestAnimationFrame(animateOuterCursor);
     },
-    [trailingSpeed, coords]
+    [coords]
   );
 
   useEffect(() => {
@@ -301,7 +300,6 @@ function AnimatedCursor({
   innerScale,
   outerSize,
   outerScale,
-  trailingSpeed,
   clickables,
 }) {
   if (typeof navigator !== 'undefined' && IsDevice.any()) {
@@ -317,7 +315,6 @@ function AnimatedCursor({
       innerScale={innerScale}
       outerSize={outerSize}
       outerScale={outerScale}
-      trailingSpeed={trailingSpeed}
       clickables={clickables}
     />
   );

@@ -7,12 +7,12 @@ const meta = {
 const introdata = {
     title: "Hi, I'm Anlon",
     animated: {
-        first: "Software Developer",
-        second: "Machine Learning Engineer",
+        first: "Software Engineer",
+        second: "ML/AI Researcher",
         third: "Sustainability Advocate",
         fourth: "Princeton Computer Science",
     },
-    description: "I like to design, build, and share projects. Feel free to click around this site and explore some of my work.",
+    description: "Obsessed with building software and learning new tech :) Explore some of my work here",
     your_img_url: "../../assets/images/Zhu_headshot.png",
 };
 

@@ -4,6 +4,7 @@
   pointer-events: none; /* Make sure it doesn't interfere with other interactions */
   filter: url('#goo');
   background: transparent;
+  transform: scale(0.5);
 }
 
 .goo-container > div {
@@ -22,8 +23,8 @@
 }
 
 .goo-container > div:nth-child(2) {
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
 }
 
 .goo-container > div:nth-child(3) {
