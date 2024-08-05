@@ -4,13 +4,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
 import SkillCloud from "../../components/skillcloud";
 import * as icon from "@coreui/icons";
-import {
-  dataabout,
-  meta,
-  worktimeline,
-  skills,
-  services,
-} from "../../content_option";
+import { meta, worktimeline, skills, frameworks } from "../../content_option";
 
 export default function About() {
   return (
@@ -53,11 +47,19 @@ export default function About() {
           </Col>
         </Row>
         <Row className="sec_sp">
-          <Col lg="4">
-            <h3 className="color_sec py-4">Skills</h3>
+          <Col lg="3">
+            <h3 className="color_sec py-4">Languages</h3>
           </Col>
-          <Col lg="8">
+          <Col lg="9">
             <SkillCloud skills={skills} icon={icon} />
+          </Col>
+        </Row>
+        <Row className="sec_sp">
+          <Col lg="3">
+            <h3 className="color_sec py-4">Other Tech</h3>
+          </Col>
+          <Col lg="9">
+            <SkillCloud skills={frameworks} icon={icon} />
           </Col>
         </Row>
       </Container>

@@ -102,6 +102,44 @@ const skills = [{
         value: 70,
     },
     {
+        name: "PHP",
+        icon: "cibPhp",
+        value: 70,
+    },
+    {
+        name: "HTML",
+        icon: "cibHtml5",
+        value: 80,
+    },
+    {
+        name: "CSS",
+        icon: "cibCss3Shiled",
+        value: 80,
+    },
+    {
+        name: "GO",
+        icon: "cibGo",
+        value: 50,
+    },
+    {
+        name: "Rust",
+        icon: "cibRust",
+        value: 20,
+    },
+    {
+        name: "OCaml",
+        icon: "cibOcaml",
+        value: 40,
+    },
+    {
+        name: "R",
+        icon: "cibR",
+        value: 70,
+    }
+];
+
+const frameworks = [
+    {
         name: "PostgreSQL",
         icon: "cibPostgresql",
         value: 80,
@@ -166,41 +204,6 @@ const skills = [{
         icon: "cibPytorch",
         value: 70,
     },
-    {
-        name: "PHP",
-        icon: "cibPhp",
-        value: 70,
-    },
-    {
-        name: "HTML",
-        icon: "cibHtml5",
-        value: 80,
-    },
-    {
-        name: "CSS",
-        icon: "cibCss3Shiled",
-        value: 80,
-    },
-    {
-        name: "GO",
-        icon: "cibGo",
-        value: 50,
-    },
-    {
-        name: "Rust",
-        icon: "cibRust",
-        value: 20,
-    },
-    {
-        name: "OCaml",
-        icon: "cibOcaml",
-        value: 40,
-    },
-    {
-        name: "R",
-        icon: "cibR",
-        value: 70,
-    }
 ];
 
 const services = [{
@@ -277,6 +280,7 @@ export {
     dataportfolio,
     worktimeline,
     skills,
+    frameworks,
     services,
     introdata,
     contactConfig,

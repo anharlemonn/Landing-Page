@@ -1,17 +1,25 @@
+
+.skill-icon {
+  fill: var(--secondary-color);
+}
+
 .skill-cloud {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
-  width: 100%;
-  padding: 20px;
   box-sizing: border-box;
+  gap: 10px;
 }
 
 .skill-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 10px;
-  transition: transform 0.2s ease-in-out;
+  margin: 1rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.skill-item:hover {
+  transform: scale(1.1);
 }
