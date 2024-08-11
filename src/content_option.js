@@ -1,7 +1,11 @@
+import CIcon from "@coreui/icons-react";
+import * as icon from "@coreui/icons";
+import FateZeroUBW from "./fatezero_content";
+
 const logotext = "ANLON";
 const meta = {
     title: "Anlon Zhu",
-    description: "I’m Anlon Zhu, SWE and Computer Science student at Princeton University. I’m interested in machine learning, sustainability, and software engineering.",
+    description: "I'm Anlon Zhu, SWE and Computer Science student at Princeton University. I'm interested in machine learning, sustainability, and software engineering.",
 };
 
 const introdata = {
@@ -14,11 +18,6 @@ const introdata = {
     },
     description: "Obsessed with building software and learning new tech :) Explore some of my work here",
     your_img_url: "../../assets/images/Zhu_headshot.png",
-};
-
-const dataabout = {
-    title: "abit about my self",
-    aboutme: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis dolor id ligula semper elementum feugiat pretium nulla. Nunc non commodo dolor. Nunc mollis dignissim facilisis. Morbi ut magna ultricies.",
 };
 
 const worktimeline = [
@@ -74,187 +73,184 @@ const worktimeline = [
 const skills = [{
         name: "Python",
         icon: "cibPython",
-        value: 90,
     },
     {
         name: "Java",
         icon: "cibJava",
-        value: 80,
     },
     {
         name: "C",
         icon: "cibC",
-        value: 80,
     },
     {
         name: "C++",
         icon: "cibCplusplus",
-        value: 70,
-    },
-    {
-        name: "Javascript",
-        icon: "cibJavascript",
-        value: 80,
-    },
-    {
-        name: "TypeScript",
-        icon: "cibTypescript",
-        value: 70,
-    },
-    {
-        name: "PHP",
-        icon: "cibPhp",
-        value: 70,
-    },
-    {
-        name: "HTML",
-        icon: "cibHtml5",
-        value: 80,
-    },
-    {
-        name: "CSS",
-        icon: "cibCss3Shiled",
-        value: 80,
     },
     {
         name: "GO",
         icon: "cibGo",
-        value: 50,
     },
     {
         name: "Rust",
         icon: "cibRust",
-        value: 20,
+    },
+    {
+        name: "Javascript",
+        icon: "cibJavascript",
+    },
+    {
+        name: "TypeScript",
+        icon: "cibTypescript",
+    },
+    {
+        name: "PHP",
+        icon: "cibPhp",
+    },
+    {
+        name: "HTML",
+        icon: "cibHtml5",
+    },
+    {
+        name: "CSS",
+        icon: "cibCss3Shiled",
     },
     {
         name: "OCaml",
         icon: "cibOcaml",
-        value: 40,
     },
     {
         name: "R",
         icon: "cibR",
-        value: 70,
     }
 ];
 
 const frameworks = [
     {
-        name: "PostgreSQL",
-        icon: "cibPostgresql",
-        value: 80,
-    },
-    {
-        name: "MySQL",
-        icon: "cibMysql",
-        value: 80,
-    },
-    {
-        name: "Docker",
-        icon: "cibDocker",
-        value: 70,
-    },
-    {
-        name: "AWS",
-        icon: "cibAmazonAws",
-        value: 70,
-    },
-    {
-        name: "AzureDevOps",
-        icon: "cibAzureDevops",
-        value: 70,
-    },
-    {
-        name: "GraphQL",
-        icon: "cibGraphql",
-        value: 70,
-    },
-    {
-        name: "Redis",
-        icon: "cibRedis",
-        value: 70,
+        name: "React",
+        icon: "cibReact",
     },
     {
         name: "Node",
         icon: "cibNodeJs",
-        value: 80,
     },
     {
         name: "Vue",
         icon: "cibVueJs",
-        value: 70,
     },
     {
         name: "Symfony",
         icon: "cibSymfony",
-        value: 70,
     },
     {
         name: "Django",
         icon: "cibDjango",
-        value: 80,
     },
     {
         name: "Flask",
         icon: "cibFlask",
-        value: 70,
     },
     {
         name: "PyTorch",
         icon: "cibPytorch",
-        value: 70,
+    },
+    {
+        name: "PostgreSQL",
+        icon: "cibPostgresql",
+    },
+    {
+        name: "MySQL",
+        icon: "cibMysql",
+    },
+    {
+        name: "Docker",
+        icon: "cibDocker",
+    },
+    {
+        name: "AWS",
+        icon: "cibAmazonAws",
+    },
+    {
+        name: "AzureDevOps",
+        icon: "cibAzureDevops",
+    },
+    {
+        name: "GraphQL",
+        icon: "cibGraphql",
+    },
+    {
+        name: "Redis",
+        icon: "cibRedis",
+    },
+    {
+        name: "Postman",
+        icon: "cibPostman",
+    },
+    {
+        name: "Anaconda",
+        icon: "cibAnaconda",
+    },
+    {
+        name: "Blender",
+        icon: "cibBlender",
     },
 ];
 
-const services = [{
-        title: "UI & UX Design",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
-    },
-    {
-        title: "Mobile Apps",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
-    },
-    {
-        title: "Wordpress Design",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
-    },
-];
+const wip = (
+    <div style={{ textAlign: "center", padding: "50px" }}>
+      <h1 style={{ fontSize: "48px", color: "var(--text-color-4)" }}>
+        Work in Progress
+      </h1>
+      <p style={{ fontSize: "24px" }}>
+        This project page is still under construction. Stay tuned for updates!
+      </p>
+      <CIcon icon={icon["cilTruck"]} size="9xl"/>
+    </div>
+  )
+
 
 const dataportfolio = [
     {
         img: "fatezero.png",
         description: "FateZero UBW - Text2Video Research",
         link: "https://www.youtube.com/watch?v=W2CZ2xDIlGQ",
+        content: FateZeroUBW,
     },
     {
         img: "wave-clock.png",
         description: "Wave Clock",
-        link: "https://wave-clock.vercel.app/"
+        link: "https://wave-clock.vercel.app/",
+        content: wip,
     },
     {
         img: "workwell.png",
         description: "Workwell Database",
         link: "https://workwell.herokuapp.com/workwell/",
+        content: wip,
+
     },
     {
         img: "chess-events.webp",
         description: "Chess Marketing Campaigns",
-        link: "https://www.chess.com/events"
+        link: "https://www.chess.com/events",
+        content: wip,
     },
     {
         img: "energy_research.png",
         description: "UCSB - Renewable Energy Research",
-        link: "https://www.dropbox.com/scl/fi/dq0ajcw8h4jfkhgihvtz7/Zhu_Energy_Research.pdf?rlkey=3uvhjaoi2b30lqf98ex23hz7x&dl=0"
+        link: "https://www.dropbox.com/scl/fi/dq0ajcw8h4jfkhgihvtz7/Zhu_Energy_Research.pdf?rlkey=3uvhjaoi2b30lqf98ex23hz7x&dl=0",
+        content: wip,
     },
     {
         img: "weavegrid.webp",
         description: "Weavegrid Task Queue",
-        link: "https://app.weavegrid.com/login?next=/"
+        link: "https://app.weavegrid.com/login?next=/",
+        content: wip,
     },
     {
         img: "rhythmix.jpeg",
         description: "Rhythmix Music Game",
         link: "https://github.com/anlon-zhu/rhythmix",
+        content: wip,
     },
 ];
 
@@ -276,12 +272,10 @@ const socialprofiles = {
 };
 export {
     meta,
-    dataabout,
     dataportfolio,
     worktimeline,
     skills,
     frameworks,
-    services,
     introdata,
     contactConfig,
     socialprofiles,

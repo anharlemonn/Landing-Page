@@ -5,6 +5,7 @@
     --text-color: #d6d9d3;
     --text-color-2: #d6d9d3;
     --text-color-3: rgb(80, 170, 94);
+    --text-color-4: #FF5733;
     --overlay-color: rgba(0, 0, 0, 0.63);
 }
 
@@ -15,6 +16,7 @@
     --text-color: #202120;
     --text-color-2: #202120;
     --text-color-3:rgb(80, 170, 94);
+    --text-color-4: #FF5733;
     --overlay-color: rgb(255 255 255 / 70%);
 }
 

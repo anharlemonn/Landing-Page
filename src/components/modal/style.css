@@ -1,29 +1,73 @@
 .modal__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .modal__close-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.5rem;
-    color: var(--text-color);
-    margin-bottom: 0.5rem;
-  }
-  
-  .modal__close-button:hover {
-    color: var(--text-color-3);
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky; /* Stick the header to the top of the modal */
+  top: 0; /* Make sure it stays at the top */
+  background-color: var(--primary-color); /* Ensure header has a background color */
+  z-index: 1000; /* Keep it above other content */
+  padding: 10px; /* Add some padding for better spacing */
+  border-bottom: 1px solid var(--text-color); /* Optional: Add a border for separation */
+}
+
+.modal__close-button {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 2em;
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.modal__close-button:hover {
+  color: var(--text-color-3);
+}
+
 .modal__header_item {
-    color: var(--text-color-2);
-    line-height: 1;
-    font-size: 2rem;
-    display: inline-block;
-    position: relative;
-    padding: 4px 0px;
-    text-decoration: none;
-    font-family: Marcellus;
+  color: var(--text-color-2);
+  line-height: 1;
+  font-size: 2rem;
+  display: inline-block;
+  position: relative;
+  padding: 4px 0px;
+  text-decoration: none;
+  font-family: Marcellus;
+}
+
+.modal__wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden auto;
+}
+
+.modal_nav {
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  visibility: hidden;
+  z-index: 999; /* Ensure modal content is below the header */
+}
+
+.modal__opened {
+  visibility: visible !important;
+}
+
+.modal__opened .bg__modal {
+  transform: translateY(0);
+}
+
+.bg__modal {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  will-change: transform;
+  transform: translateY(100%);
+  transition: .5s ease all;
 }

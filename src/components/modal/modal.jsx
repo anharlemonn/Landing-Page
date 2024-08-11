@@ -5,11 +5,11 @@ import { VscChromeClose } from "react-icons/vsc";
 const Modal = ({ isOpen, onClose, title, footer, children }) => {
   return (
     <div
-      className={`site__navigation ${isOpen ? "menu__opend" : ""}`}
-      style={{ zIndex: 1050 }}
+      className={`modal_nav ${isOpen ? "modal__opened" : ""}`}
+      style={{ zIndex: 9999 }}
     >
-      <div className="bg__menu">
-        <div className="menu__wrapper">
+      <div className="bg__modal">
+        <div className="modal__wrapper">
           <div className="p-3">
             <div className="modal__header">
               <h5 className="modal__header_item my-2">{title}</h5>

@@ -1,12 +1,29 @@
 import React from "react";
+import { useState } from "react";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
 import { dataportfolio, meta } from "../../content_option";
+import Modal from "../../components/modal/modal";
+import { Link } from "react-router-dom";
+import ReactDom from "react-dom";
 
 export default function Portfolio() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [modalHeader, setModalHeader] = useState("");
+  const [modalContent, setModalContent] = useState();
+
+  const toggleModal = ({ header, content }) => {
+    setModalHeader(header);
+    setModalContent(content);
+    setIsOpen(!isOpen);
+  };
+
   return (
     <HelmetProvider>
+      <Modal isOpen={isOpen} onClose={toggleModal} title={modalHeader}>
+        {modalContent}
+      </Modal>
       <div className="portfolio" id="portfolio">
         <Container className="About-header">
           <Helmet>
@@ -27,9 +44,20 @@ export default function Portfolio() {
                   <img src={require("./" + data.img)} alt="" />
                   <div className="content">
                     <p>{data.description}</p>
-                    <a href={data.link} target="_blank" rel="noreferrer">
+                    <Link
+                      to="#"
+                      onClick={() =>
+                        toggleModal({
+                          header: data.description,
+                          content: data.content,
+                        })
+                      }
+                    >
                       View Project
-                    </a>
+                    </Link>
+                    {/* <a href={data.link} target="_blank" rel="noreferrer">
+                      View Project
+                    </a> */}
                   </div>
                 </div>
               );
