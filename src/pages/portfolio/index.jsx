@@ -42,23 +42,18 @@ export default function Portfolio() {
               return (
                 <div key={i} className="po_item">
                   <img src={require("./" + data.img)} alt="" />
-                  <div className="content">
-                    <p>{data.description}</p>
-                    <Link
-                      to="#"
-                      onClick={() =>
-                        toggleModal({
-                          header: data.description,
-                          content: data.content,
-                        })
-                      }
-                    >
-                      View Project
-                    </Link>
-                    {/* <a href={data.link} target="_blank" rel="noreferrer">
-                      View Project
-                    </a> */}
-                  </div>
+                  <Link
+                    className="content"
+                    to="#"
+                    onClick={() =>
+                      toggleModal({
+                        header: data.description,
+                        content: data.content,
+                      })
+                    }
+                  >
+                    +
+                  </Link>
                 </div>
               );
             })}

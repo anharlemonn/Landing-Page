@@ -1,6 +1,7 @@
 import CIcon from "@coreui/icons-react";
 import * as icon from "@coreui/icons";
 import FateZeroUBW from "./fatezero_content";
+import WaveClock from "./waveclock_content";
 
 const logotext = "ANLON";
 const meta = {
@@ -219,7 +220,7 @@ const dataportfolio = [
         img: "wave-clock.png",
         description: "Wave Clock",
         link: "https://wave-clock.vercel.app/",
-        content: wip,
+        content: WaveClock,
     },
     {
         img: "workwell.png",

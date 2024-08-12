@@ -5,13 +5,6 @@ import {
   createTheme,
 } from "@mui/material/styles";
 
-// Function to get CSS variable value
-const getCssVariable = (variable) => {
-  return getComputedStyle(document.documentElement)
-    .getPropertyValue(variable)
-    .trim();
-};
-
 // Create a context for the theme
 const ThemeContext = createContext();
 
@@ -19,26 +12,10 @@ export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
 
   // Define colors based on CSS variables
-  const primaryColor = getCssVariable("--primary-color");
-  const secondaryColor = getCssVariable("--secondary-color");
-  const textColor = getCssVariable("--text-color");
-  const backgroundColor = getCssVariable("--bg-color");
 
   const muiTheme = createTheme({
     palette: {
       mode: theme,
-      primary: {
-        main: primaryColor,
-      },
-      secondary: {
-        main: secondaryColor,
-      },
-      text: {
-        primary: textColor,
-      },
-      background: {
-        default: backgroundColor,
-      },
     },
     typography: {
       fontFamily: "'Raleway', sans-serif",

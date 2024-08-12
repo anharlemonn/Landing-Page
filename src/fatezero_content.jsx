@@ -172,14 +172,24 @@ const FateZeroUBW = () => {
             <img
               src={require("./assets/fatezero/init_res.gif")}
               alt="Initial Output"
-              style={{ width: "100%" }}
+              style={{
+                width: "60%",
+                height: "auto",
+                display: "block",
+                margin: "0 auto",
+              }}
             />
           </Grid>
           <Grid item xs={12} sm={6}>
             <img
               src={require("./assets/fatezero/final_res.gif")}
               alt="Final Output"
-              style={{ width: "100%" }}
+              style={{
+                width: "60%",
+                height: "auto",
+                display: "block",
+                margin: "0 auto",
+              }}
             />
           </Grid>
         </Grid>
@@ -199,21 +209,15 @@ const FateZeroUBW = () => {
           modification.
         </Typography>
         <Grid container spacing={2}>
-          <Grid item xs={12} sm={4}>
+          <Grid item xs={12} sm={6}>
             <img
               src={require("./assets/fatezero/testset0.gif")}
               alt="Test Set 0"
               style={{ width: "100%" }}
             />
           </Grid>
-          <Grid item xs={12} sm={4}>
-            <img
-              src={require("./assets/fatezero/testset1.gif")}
-              alt="Test Set 1"
-              style={{ width: "100%" }}
-            />
-          </Grid>
-          <Grid item xs={12} sm={4}>
+
+          <Grid item xs={12} sm={6}>
             <img
               src={require("./assets/fatezero/testset2.gif")}
               alt="Test Set 2"
@@ -225,11 +229,13 @@ const FateZeroUBW = () => {
           And finally, here's the model improvements (our model is the
           right-most bar):
         </Typography>
-        <img
-          src={require("./assets/fatezero/final_res_scores.png")}
-          alt="Final Scores"
-          style={{ width: "80%" }}
-        />
+        <Box sx={{ display: "flex", justifyContent: "center" }}>
+          <img
+            src={require("./assets/fatezero/final_res_scores.png")}
+            alt="Final Scores"
+            style={{ width: "80%" }}
+          />
+        </Box>
         <Typography variant="body1" paragraph sx={{ marginTop: 2 }}>
           As you can see, we got:
         </Typography>
