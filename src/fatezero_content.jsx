@@ -195,7 +195,7 @@ const FateZeroUBW = () => {
         </Grid>
       </Paper>
 
-      <Paper elevation={3} sx={{ padding: 2 }}>
+      <Paper elevation={3} sx={{ padding: 2, marginBottom: 3 }}>
         <Typography variant="h4" gutterBottom>
           Ok, but how about on other datasets?
         </Typography>
@@ -280,6 +280,22 @@ const FateZeroUBW = () => {
           better representing the natural language used to make the edits while
           maintaining the generated videos smoothness between frames.
         </Typography>
+      </Paper>
+
+      <Paper elevation={3} sx={{ padding: 2, marginBottom: 3 }}>
+        <Typography variant="h4" gutterBottom>
+          Watch the Demo
+        </Typography>
+        <iframe
+          src="https://www.youtube.com/embed/W2CZ2xDIlGQ"
+          title="YouTube Video"
+          style={{
+            width: "100%",
+            height: "800px",
+            border: "none",
+            marginTop: "20px",
+          }}
+        />
       </Paper>
     </Box>
   );
