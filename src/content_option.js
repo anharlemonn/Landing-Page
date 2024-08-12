@@ -6,6 +6,7 @@ import Blank from "./portfolio-pages/blank";
 import WIP from "./portfolio-pages/wip";
 import Rhythmix from "./portfolio-pages/rhythmix";
 import WorkWell from "./portfolio-pages/workwell";
+import Ingreedient from "./portfolio-pages/ingreedient";
 
 const logotext = "ANLON";
 const meta = {
@@ -202,23 +203,15 @@ const frameworks = [
 
 const dataportfolio = [
     {
+        img: "assets/portfolio-assets/infinigen.png",
+        description: "Thesis: Physics in 3D Computer Vision",
+        content: WIP,
+    },
+    {
         img: "assets/portfolio-assets/fatezero.png",
         description: "Generative AI Research",
         link: "https://www.youtube.com/watch?v=W2CZ2xDIlGQ",
         content: FateZeroUBW,
-    },
-    {
-        img: "assets/portfolio-assets/chess-events.webp",
-        description: "Chess Marketing Campaigns",
-        link: "https://www.chess.com/events",
-        content: Blank("https://www.chess.com/events"),
-    },
-
-    {
-        img: "assets/portfolio-assets/energy_research.png",
-        description: "UCSB - Renewable Energy Research",
-        link: "https://www.dropbox.com/scl/fi/dq0ajcw8h4jfkhgihvtz7/Zhu_Energy_Research.pdf?rlkey=3uvhjaoi2b30lqf98ex23hz7x&dl=0",
-        content: WIP,
     },
     {
         img: "assets/portfolio-assets/wave-clock.png",
@@ -227,6 +220,18 @@ const dataportfolio = [
         content: WaveClock,
     },
     {
+        img: "assets/portfolio-assets/rhythmix.jpeg",
+        description: "Rhythmix 2.0 Music Game",
+        link: "https://github.com/anlon-zhu/rhythmix",
+        content: Rhythmix,
+    },
+    {
+        img: "assets/portfolio-assets/ingreedient.png",
+        description: "Ingredient-based Recipe Search",
+        content: Ingreedient,
+    },
+
+    {
         img: "assets/portfolio-assets/workwell.png",
         description: "Workwell Database",
         link: "https://workwell.herokuapp.com/workwell/",
@@ -234,16 +239,28 @@ const dataportfolio = [
 
     },
     {
+        img: "assets/portfolio-assets/chess-events.webp",
+        description: "Chess Marketing Campaigns",
+        link: "https://www.chess.com/events",
+        content: Blank("https://www.chess.com/events"),
+    },
+    {
         img: "assets/portfolio-assets/weavegrid.webp",
         description: "Weavegrid Task Queue",
         link: "https://app.weavegrid.com/login?next=/",
         content: Blank("https://app.weavegrid.com/login?next=/"),
     },
+
     {
-        img: "assets/portfolio-assets/rhythmix.jpeg",
-        description: "Rhythmix 2.0 Music Game",
-        link: "https://github.com/anlon-zhu/rhythmix",
-        content: Rhythmix,
+        img: "assets/portfolio-assets/alexnet.png",
+        description: "AlexNet CNN Similarity Cache",
+        content: WIP,  
+    },
+    {
+        img: "assets/portfolio-assets/energy_research.png",
+        description: "UCSB - Renewable Energy Research",
+        link: "https://www.dropbox.com/scl/fi/dq0ajcw8h4jfkhgihvtz7/Zhu_Energy_Research.pdf?rlkey=3uvhjaoi2b30lqf98ex23hz7x&dl=0",
+        content: WIP,
     },
 ];
 

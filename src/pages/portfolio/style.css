@@ -5,25 +5,21 @@
 }
 
 .po_items_ho {
-    column-width: 15em;
-    -moz-column-width: 15em;
-    -webkit-column-width: 15em;
-    column-gap: 4rem;
-    -moz-column-gap: 4rem;
-    -webkit-column-gap: 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr)); /* Responsive columns */
+    gap: 4rem; /* Similar spacing to your original design */
+    justify-items: center; /* Center the grid items */
 }
 
 .po_item {
-    display: inline-block;
-    width: 100%;
+    width: 100%; /* Ensure the item takes up full width of its grid cell */
+    aspect-ratio: 1 / 1; /* Keeps the item square */
     text-align: center;
-    margin: 1rem auto;
     position: relative;
     background: var(--secondary-color);
     border: 6px solid var(--secondary-color);
     transition: 0.3s ease;
     font-size: 0;
-    min-height: 300px;
     overflow: hidden;
     align-items: center;
     justify-content: center;
@@ -31,9 +27,7 @@
 
 .po_item img {
     width: 100%;
-    min-height: 300px;
-    height: auto;
-    max-height: 300px;
+    height: 100%;
     object-fit: cover;
     filter: saturate(0.85);
 }
