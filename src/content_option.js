@@ -250,7 +250,11 @@ const dataportfolio = [
         link: "https://app.weavegrid.com/login?next=/",
         content: Blank("https://app.weavegrid.com/login?next=/"),
     },
-
+    {
+        img: "assets/portfolio-assets/microsoft.png",
+        description: "Microsoft: AI Anomaly Detection",
+        content: Blank("https://aka.ms/coreos"),
+    },
     {
         img: "assets/portfolio-assets/alexnet.png",
         description: "AlexNet CNN Similarity Cache",
