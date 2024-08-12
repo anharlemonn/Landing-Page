@@ -41,7 +41,7 @@ export default function Portfolio() {
             {dataportfolio.map((data, i) => {
               return (
                 <div key={i} className="po_item">
-                  <img src={require("./" + data.img)} alt="" />
+                  <img src={require("../../" + data.img)} alt="" />
                   <Link
                     className="content"
                     to="#"

@@ -1,7 +1,11 @@
 import CIcon from "@coreui/icons-react";
 import * as icon from "@coreui/icons";
-import FateZeroUBW from "./fatezero_content";
-import WaveClock from "./waveclock_content";
+import FateZeroUBW from "./portfolio-pages/fatezero_content";
+import WaveClock from "./portfolio-pages/waveclock_content";
+import Blank from "./portfolio-pages/blank";
+import WIP from "./portfolio-pages/wip";
+import Rhythmix from "./portfolio-pages/rhythmix";
+import WorkWell from "./portfolio-pages/workwell";
 
 const logotext = "ANLON";
 const meta = {
@@ -18,7 +22,7 @@ const introdata = {
         fourth: "Princeton Computer Science",
     },
     description: "Obsessed with building software and learning new tech :) Explore some of my work here",
-    your_img_url: "../../assets/images/Zhu_headshot.png",
+    your_img_url: "../.assets/images/Zhu_headshot.png",
 };
 
 const worktimeline = [
@@ -196,62 +200,50 @@ const frameworks = [
     },
 ];
 
-const wip = (
-    <div style={{ textAlign: "center", padding: "50px" }}>
-      <h1 style={{ fontSize: "48px", color: "var(--text-color-4)" }}>
-        Work in Progress
-      </h1>
-      <p style={{ fontSize: "24px" }}>
-        This project page is still under construction. Stay tuned for updates!
-      </p>
-      <CIcon icon={icon["cilTruck"]} size="9xl"/>
-    </div>
-  )
-
-
 const dataportfolio = [
     {
-        img: "fatezero.png",
-        description: "FateZero UBW - Text2Video Research",
+        img: "assets/portfolio-assets/fatezero.png",
+        description: "Generative AI Research",
         link: "https://www.youtube.com/watch?v=W2CZ2xDIlGQ",
         content: FateZeroUBW,
     },
     {
-        img: "wave-clock.png",
+        img: "assets/portfolio-assets/chess-events.webp",
+        description: "Chess Marketing Campaigns",
+        link: "https://www.chess.com/events",
+        content: Blank("https://www.chess.com/events"),
+    },
+
+    {
+        img: "assets/portfolio-assets/energy_research.png",
+        description: "UCSB - Renewable Energy Research",
+        link: "https://www.dropbox.com/scl/fi/dq0ajcw8h4jfkhgihvtz7/Zhu_Energy_Research.pdf?rlkey=3uvhjaoi2b30lqf98ex23hz7x&dl=0",
+        content: WIP,
+    },
+    {
+        img: "assets/portfolio-assets/wave-clock.png",
         description: "Wave Clock",
         link: "https://wave-clock.vercel.app/",
         content: WaveClock,
     },
     {
-        img: "workwell.png",
+        img: "assets/portfolio-assets/workwell.png",
         description: "Workwell Database",
         link: "https://workwell.herokuapp.com/workwell/",
-        content: wip,
+        content: WorkWell,
 
     },
     {
-        img: "chess-events.webp",
-        description: "Chess Marketing Campaigns",
-        link: "https://www.chess.com/events",
-        content: wip,
-    },
-    {
-        img: "energy_research.png",
-        description: "UCSB - Renewable Energy Research",
-        link: "https://www.dropbox.com/scl/fi/dq0ajcw8h4jfkhgihvtz7/Zhu_Energy_Research.pdf?rlkey=3uvhjaoi2b30lqf98ex23hz7x&dl=0",
-        content: wip,
-    },
-    {
-        img: "weavegrid.webp",
+        img: "assets/portfolio-assets/weavegrid.webp",
         description: "Weavegrid Task Queue",
         link: "https://app.weavegrid.com/login?next=/",
-        content: wip,
+        content: Blank("https://app.weavegrid.com/login?next=/"),
     },
     {
-        img: "rhythmix.jpeg",
-        description: "Rhythmix Music Game",
+        img: "assets/portfolio-assets/rhythmix.jpeg",
+        description: "Rhythmix 2.0 Music Game",
         link: "https://github.com/anlon-zhu/rhythmix",
-        content: wip,
+        content: Rhythmix,
     },
 ];
 
