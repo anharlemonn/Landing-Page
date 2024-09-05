@@ -241,5 +241,5 @@
 .intro_sec .h_bg-img img {
     width: 100%;
     position: absolute;
-    bottom: -18%;
+    /* bottom: %; */
 }

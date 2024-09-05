@@ -4,10 +4,10 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import Typewriter from "typewriter-effect";
 import { introdata, meta } from "../../content_option";
 import { HashLink as Link } from "react-router-hash-link";
-import my_img from "./Zhu_headshot.png";
+import my_img from "./anhar_headshot.jpg";
 import Modal from "../../components/modal/modal";
 import { useState } from "react";
-import resumePDF from "./Anlon_Resume.pdf";
+import resumePDF from "./Anhar_Saif_Resume.pdf";
 import PDFViewer from "../../hooks/PDFViewer.tsx";
 
 export default function Home() {

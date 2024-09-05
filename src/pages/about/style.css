@@ -12,7 +12,7 @@
     border-color: var(--text-color) !important;
 }
 
-.img_back {
+/* .img_back {
     background: var(--secondary-color);
     border-radius: 50%;
     width: 2.5rem;
@@ -22,10 +22,10 @@
     justify-content: center;
     padding: 9%;
     margin: 0 1em;
-}
+} */
 
 .icon {
-    height: 1.6rem;
+    height: 3rem;
     margin-right: 30px;
 }
 
